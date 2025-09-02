@@ -441,6 +441,40 @@
             margin-bottom: 15px;
         }
 
+        .motivation {
+            background: linear-gradient(135deg, var(--pale-green) 0%, #d8f3dc 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid var(--primary-green);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .motivation::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 150px;
+            color: rgba(45, 106, 79, 0.1);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .motivation p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            font-weight: 500;
+            color: var(--primary-green);
+            position: relative;
+            z-index: 1;
+        }
+
+        .motivation p strong {
+            color: var(--light-green);
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
@@ -518,6 +552,10 @@
                 <li><strong>Night-shift optimized:</strong> Meal timing strategies for circadian rhythm alignment</li>
                 <li><strong>Diet break protocol:</strong> Strategic refeed at 200lbs to prevent metabolic adaptation</li>
             </ul>
+
+            <div class="motivation">
+                <p>This journey will demand <strong>unwavering discipline</strong>, <strong>relentless hard work</strong>, and <strong>laser-like focus</strong>. Transforming your body is not merely about changing numbers on a scale—it's about <strong>becoming your best self</strong>. You must make the conscious choice to leave behind the version of you that accepts mediocrity and fully embrace the stronger, healthier, more disciplined individual you are destined to become. Every workout, every meal, every sacrifice is a step toward this new identity. This is your moment to redefine who you are and what you're capable of achieving. The old you served its purpose, but now it's time to welcome in your <strong>best version</strong>—the one who doesn't make excuses, who commits fully, and who stops at nothing to achieve greatness.</p>
+            </div>
 
             <div class="tips-section">
                 <h3><i class="fas fa-microscope"></i> Scientific Foundation</h3>
