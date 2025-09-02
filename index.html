@@ -3,1686 +3,949 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Ely's Wedding Peaking Plan | MyDailyAgency</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Michael Ely's Fitness Transformation Plan | MyDailyAgency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #2ecc71;
-            --warning-color: #f39c12;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #40916c;
+            --accent-green: #52b788;
+            --pale-green: #b7e4c7;
+            --cream: #f8f9fa;
+            --light-cream: #fefefe;
+            --dark-text: #212529;
+            --medium-text: #495057;
+            --light-text: #6c757d;
+            --shadow: 0 10px 30px rgba(45, 106, 79, 0.1);
+            --shadow-hover: 0 15px 35px rgba(45, 106, 79, 0.15);
+        }
+
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--light-cream);
+            min-height: 100vh;
         }
-        
+
         .container {
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            font-size: 2rem;
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-        }
-        
-        .client-info {
-            text-align: right;
-        }
-        
-        .client-info h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.2rem;
-            color: white;
-        }
-        
-        .client-info p {
-            font-size: 1rem;
-            color: var(--light-color);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
-            color: white;
-            padding: 4rem 0;
+
+        .header {
             text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
             color: white;
-        }
-        
-        .countdown-container {
-            margin: 2rem 0;
-        }
-        
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .countdown-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 1rem;
-            min-width: 100px;
-            text-align: center;
-            backdrop-filter: blur(5px);
-        }
-        
-        .countdown-item span {
-            display: block;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-        
-        .countdown-item p {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-        
-        /* Main Content */
-        .main-content {
-            padding: 3rem 0;
-        }
-        
-        .section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .section-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--light-color);
-            padding-bottom: 1rem;
-        }
-        
-        .section-header i {
-            font-size: 1.8rem;
-            margin-right: 15px;
-            color: var(--secondary-color);
-        }
-        
-        .section-header h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-        }
-        
-        /* Calendar Styles */
-        .calendar-container {
-            margin: 2rem 0;
-        }
-        
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-        }
-        
-        .calendar-day {
-            background-color: white;
-            border: 2px solid var(--light-color);
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .calendar-day:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-color: var(--secondary-color);
-        }
-        
-        .calendar-day.active {
-            background-color: var(--secondary-color);
-            color: white;
-            border-color: var(--secondary-color);
-        }
-        
-        .calendar-day-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .calendar-day-date {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .calendar-day-type {
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-        /* Workout Details */
-        .workout-details {
-            display: none;
-            background-color: white;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-top: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .workout-details.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .workout-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--light-color);
-            padding-bottom: 1rem;
-        }
-        
-        .workout-title h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.2rem;
-        }
-        
-        .workout-title p {
-            color: #666;
-        }
-        
-        .workout-phase {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
+            padding: 50px 30px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .stats {
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .branding {
+            font-size: 1em;
             font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
         }
-        
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--light-color);
-        }
-        
-        th {
-            background-color: var(--primary-color);
-            color: white;
-            font-weight: 600;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-        
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        
-        /* Workout Notes */
-        .workout-notes {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--secondary-color);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .workout-notes h4 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Tabs */
+
         .tabs {
             display: flex;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--light-color);
             flex-wrap: wrap;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
         }
-        
+
         .tab {
-            padding: 0.8rem 1.5rem;
+            flex: 1;
+            min-width: 150px;
+            background: white;
+            color: var(--medium-text);
+            padding: 18px 15px;
+            text-align: center;
             cursor: pointer;
-            font-weight: 600;
-            border-bottom: 3px solid transparent;
             transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95em;
+            font-weight: 500;
+            position: relative;
         }
-        
+
         .tab:hover {
-            background-color: var(--light-color);
+            background: var(--pale-green);
+            color: var(--primary-green);
         }
-        
+
         .tab.active {
-            border-bottom: 3px solid var(--secondary-color);
-            color: var(--secondary-color);
+            background: var(--primary-green);
+            color: white;
         }
-        
+
+        .tab i {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+
         .tab-content {
             display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
         }
-        
+
         .tab-content.active {
             display: block;
-            animation: fadeIn 0.5s ease;
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .tab-content h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-green);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--pale-green);
         }
-        
-        /* Lists */
-        ul, ol {
-            padding-left: 1.5rem;
-            margin: 1rem 0;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Cards */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .card-header h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        
-        .card-days {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 0.3rem 0.6rem;
+
+        .calculator {
+            background: var(--cream);
+            padding: 30px;
             border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
-        .card-body {
-            padding: 1.5rem;
+
+        .calculator h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-size: 1.4em;
         }
-        
-        .card-date {
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Progress Bar */
-        .progress-container {
-            margin: 1.5rem 0;
-        }
-        
-        .progress-bar {
-            height: 25px;
-            background-color: var(--light-color);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        
-        .progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--secondary-color), var(--success-color));
-            width: 0%;
-            border-radius: 15px;
-            transition: width 0.5s ease;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            color: white;
-            font-weight: 600;
-        }
-        
-        /* Daily Schedule */
-        .schedule {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .schedule::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background-color: var(--light-color);
-        }
-        
-        .schedule-item {
-            position: relative;
-            margin-bottom: 1.5rem;
-        }
-        
-        .schedule-item::before {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--secondary-color);
-        }
-        
-        .schedule-time {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        /* Disclaimer */
-        .disclaimer {
-            background-color: #fff8e1;
-            border-left: 4px solid var(--warning-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .disclaimer h3 {
-            color: var(--warning-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-logo i {
-            font-size: 1.8rem;
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: background-color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        /* Hydration Table */
-        .hydration-table {
+
+        .calculator input {
             width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-        
-        .hydration-table th,
-        .hydration-table td {
             padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--light-color);
+            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s ease;
         }
-        
-        .hydration-table th {
-            background-color: var(--primary-color);
+
+        .calculator input:focus {
+            border-color: var(--accent-green);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.2);
+        }
+
+        .calculator button {
+            background: var(--primary-green);
             color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
             font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        
-        .hydration-table tr:nth-child(even) {
-            background-color: #f8f9fa;
+
+        .calculator button:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 106, 79, 0.2);
         }
-        
-        .hydration-table tr:hover {
-            background-color: #f1f1f1;
+
+        .result {
+            background: linear-gradient(135deg, var(--pale-green) 0%, #d8f3dc 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border-left: 5px solid var(--primary-green);
         }
-        
-        .hydration-table .time-slot {
-            font-weight: 600;
-            color: var(--secondary-color);
+
+        .result h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
-        
-        /* Responsive */
+
+        .result p {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .workout-plan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .workout-card {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 5px solid var(--primary-green);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .workout-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .workout-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+
+        .workout-card h3 i {
+            margin-right: 10px;
+            color: var(--accent-green);
+        }
+
+        .exercise-list {
+            list-style: none;
+        }
+
+        .exercise-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .exercise-list li i {
+            color: var(--accent-green);
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .meal-plan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .meal-card {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 5px solid var(--accent-green);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .meal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .meal-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+
+        .meal-card h3 i {
+            margin-right: 10px;
+            color: var(--accent-green);
+        }
+
+        .meal-card ul {
+            list-style: none;
+        }
+
+        .meal-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent-green);
+            margin-bottom: 30px;
+        }
+
+        .tips-section h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+
+        .tips-section h3 i {
+            margin-right: 10px;
+            color: var(--accent-green);
+        }
+
+        .tips-section ul {
+            list-style: none;
+            margin-left: 10px;
+        }
+
+        .tips-section ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tips-section ul li i {
+            color: var(--accent-green);
+            margin-right: 10px;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .tips-section ul li strong {
+            color: var(--primary-green);
+            margin-right: 5px;
+        }
+
+        .supplement-card {
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--light-green);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .supplement-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+        }
+
+        .supplement-card h3 i {
+            margin-right: 10px;
+            color: var(--accent-green);
+        }
+
+        .supplement-card ul {
+            list-style: none;
+        }
+
+        .supplement-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .supplement-card ul li i {
+            color: var(--accent-green);
+            margin-right: 10px;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+
+        .supplement-card ul li strong {
+            color: var(--primary-green);
+            margin-right: 5px;
+        }
+
+        .disclaimer {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            color: var(--dark-text);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border-left: 5px solid #ffb74d;
+        }
+
+        .disclaimer h3 {
+            color: #e65100;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+
+        .disclaimer h3 i {
+            margin-right: 10px;
+            color: #ffb74d;
+        }
+
+        .disclaimer p {
+            margin-bottom: 15px;
+        }
+
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .client-info {
-                margin-top: 1rem;
-                text-align: center;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .countdown {
-                gap: 1rem;
-            }
-            
-            .countdown-item {
-                min-width: 80px;
-                padding: 0.8rem;
-            }
-            
-            .countdown-item span {
-                font-size: 1.5rem;
-            }
-            
-            .calendar-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-content {
+            .tabs {
                 flex-direction: column;
             }
             
-            th, td {
-                padding: 8px 10px;
+            .tab {
+                min-width: 100%;
             }
             
-            .hydration-table th,
-            .hydration-table td {
-                padding: 10px;
+            .container {
+                padding: 15px;
             }
             
-            .card-header {
-                flex-direction: column;
-                text-align: center;
+            .header h1 {
+                font-size: 2.2em;
             }
             
-            .card-header h3 {
-                margin-bottom: 0.5rem;
+            .tab-content {
+                padding: 25px;
+            }
+            
+            .workout-plan, .meal-plan {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-dumbbell"></i>
-                <h1>MyDailyAgency</h1>
+    <div class="container">
+        <div class="header">
+            <h1>Michael Ely's Fitness Transformation Plan</h1>
+            <p>Scientifically-backed program to reach 195lbs by New Year 2025</p>
+            <div class="stats">
+                <strong>Current:</strong> 208-210lbs | <strong>Goal:</strong> 195lbs | <strong>Timeline:</strong> September 1 - December 31, 2025
             </div>
-            <div class="client-info">
-                <h2>Michael Ely</h2>
-                <p>Wedding Peaking Plan</p>
-            </div>
+            <div class="branding">Created by MyDailyAgency</div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Wedding Day Peaking Plan</h2>
-            <p>Customized strategy to reach your goal weight for August 24, 2025</p>
-            
-            <div class="countdown-container">
-                <h3>Countdown to Wedding Day</h3>
-                <div class="countdown" id="countdown">
-                    <div class="countdown-item">
-                        <span id="days">00</span>
-                        <p>Days</p>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="hours">00</span>
-                        <p>Hours</p>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="minutes">00</span>
-                        <p>Minutes</p>
-                    </div>
-                    <div class="countdown-item">
-                        <span id="seconds">00</span>
-                        <p>Seconds</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress" id="progress">0%</div>
-                </div>
-                <p>Goal: Lose 8.8 lbs in 12 days (August 12 - August 23, 2025)</p>
-            </div>
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'overview')">
+                <i class="fas fa-home"></i> Overview
+            </button>
+            <button class="tab" onclick="openTab(event, 'calculator')">
+                <i class="fas fa-calculator"></i> Calorie Calculator
+            </button>
+            <button class="tab" onclick="openTab(event, 'nutrition')">
+                <i class="fas fa-apple-alt"></i> Nutrition Plan
+            </button>
+            <button class="tab" onclick="openTab(event, 'workout')">
+                <i class="fas fa-dumbbell"></i> Workout Plan
+            </button>
+            <button class="tab" onclick="openTab(event, 'cardio')">
+                <i class="fas fa-heartbeat"></i> Cardio Plan
+            </button>
+            <button class="tab" onclick="openTab(event, 'meal-timing')">
+                <i class="fas fa-clock"></i> Meal Timing
+            </button>
+            <button class="tab" onclick="openTab(event, 'diet-break')">
+                <i class="fas fa-utensils"></i> Diet Break
+            </button>
+            <button class="tab" onclick="openTab(event, 'supplements')">
+                <i class="fas fa-pills"></i> Supplements
+            </button>
         </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <!-- Overall Strategy -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-bullseye"></i>
-                    <h2>Overall Strategy</h2>
-                </div>
-                <p>Michael needs to lose approximately 8.8 lbs in 12 days, which is more aggressive than his current rate of loss. This plan combines strategic caloric reduction, workout modifications, carbohydrate and sodium manipulation, and specific recovery strategies to achieve this goal while preserving muscle mass.</p>
-            </section>
+        <div id="overview" class="tab-content active">
+            <h2>Program Overview</h2>
+            <p>Welcome to your comprehensive fitness transformation plan! This program is designed specifically for you as a night-shift police officer with the goal of losing 13-15 pounds by New Year 2025.</p>
+            
+            <h3>Key Program Features:</h3>
+            <ul>
+                <li><strong>Auto-regulating calories:</strong> Adjusts based on your weekly weight loss progress</li>
+                <li><strong>High protein intake:</strong> 1.6-2.4g/kg to preserve muscle during fat loss</li>
+                <li><strong>Flexible workout schedule:</strong> 3 weight training + 2 cardio sessions per week</li>
+                <li><strong>Night-shift optimized:</strong> Meal timing strategies for circadian rhythm alignment</li>
+                <li><strong>Diet break protocol:</strong> Strategic refeed at 200lbs to prevent metabolic adaptation</li>
+            </ul>
 
-            <!-- Workout Calendar -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h2>12-Day Workout Calendar</h2>
-                </div>
-                <p>Click on any day to view the detailed workout plan for that day.</p>
-                
-                <div class="calendar-container">
-                    <div class="calendar-grid" id="calendar">
-                        <!-- Calendar days will be generated by JavaScript -->
-                    </div>
-                </div>
-                
-                <div class="workout-details" id="workout-details">
-                    <!-- Workout details will be displayed here when a day is clicked -->
-                </div>
-            </section>
-
-            <!-- Caloric Tapering Structure -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-utensils"></i>
-                    <h2>Caloric Tapering Structure</h2>
-                </div>
-                <p><strong>Current Status:</strong> 208.8 lbs, consuming approximately 2000 calories daily</p>
-                
-                <div class="tabs">
-                    <div class="tab active" data-tab="phase1">Phase 1 (Days 1-4)</div>
-                    <div class="tab" data-tab="phase2">Phase 2 (Days 5-8)</div>
-                    <div class="tab" data-tab="phase3">Phase 3 (Days 9-11)</div>
-                    <div class="tab" data-tab="phase4">Phase 4 (Day 12)</div>
-                </div>
-                
-                <div class="tab-content active" id="phase1">
-                    <h3>Phase 1: Accelerated Fat Loss (Days 1-4: Aug 12-15)</h3>
-                    <table>
-                        <tr>
-                            <th>Macronutrient</th>
-                            <th>Daily Target</th>
-                        </tr>
-                        <tr>
-                            <td>Calories</td>
-                            <td>1800-1900 daily</td>
-                        </tr>
-                        <tr>
-                            <td>Protein</td>
-                            <td>210g (1g/lb of target weight)</td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td>130-140g</td>
-                        </tr>
-                        <tr>
-                            <td>Fats</td>
-                            <td>60-65g</td>
-                        </tr>
-                    </table>
-                    <p>This creates a more aggressive deficit while maintaining adequate protein to preserve muscle.</p>
-                </div>
-                
-                <div class="tab-content" id="phase2">
-                    <h3>Phase 2: Strategic Reduction (Days 5-8: Aug 16-19)</h3>
-                    <table>
-                        <tr>
-                            <th>Macronutrient</th>
-                            <th>Daily Target</th>
-                        </tr>
-                        <tr>
-                            <td>Calories</td>
-                            <td>1700-1800 daily</td>
-                        </tr>
-                        <tr>
-                            <td>Protein</td>
-                            <td>210g</td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td>100-110g</td>
-                        </tr>
-                        <tr>
-                            <td>Fats</td>
-                            <td>55-60g</td>
-                        </tr>
-                    </table>
-                    <p>Further reduction in calories, primarily from carbohydrates.</p>
-                </div>
-                
-                <div class="tab-content" id="phase3">
-                    <h3>Phase 3: Peak Week Manipulation (Days 9-11: Aug 20-22)</h3>
-                    <table>
-                        <tr>
-                            <th>Macronutrient</th>
-                            <th>Daily Target</th>
-                        </tr>
-                        <tr>
-                            <td>Calories</td>
-                            <td>1600-1700 daily</td>
-                        </tr>
-                        <tr>
-                            <td>Protein</td>
-                            <td>210g</td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td>80-90g</td>
-                        </tr>
-                        <tr>
-                            <td>Fats</td>
-                            <td>50-55g</td>
-                        </tr>
-                    </table>
-                    <p>Lowest calorie phase to maximize fat loss.</p>
-                </div>
-                
-                <div class="tab-content" id="phase4">
-                    <h3>Phase 4: Rehydration and Carb Load (Day 12: Aug 23)</h3>
-                    <table>
-                        <tr>
-                            <th>Macronutrient</th>
-                            <th>Daily Target</th>
-                        </tr>
-                        <tr>
-                            <td>Calories</td>
-                            <td>2100-2200</td>
-                        </tr>
-                        <tr>
-                            <td>Protein</td>
-                            <td>180g</td>
-                        </tr>
-                        <tr>
-                            <td>Carbs</td>
-                            <td>250-300g</td>
-                        </tr>
-                        <tr>
-                            <td>Fats</td>
-                            <td>50g</td>
-                        </tr>
-                    </table>
-                    <p>Strategic increase in carbs and calories to improve appearance and energy for the event.</p>
-                </div>
-            </section>
-
-            <!-- Cardio Adjustments -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-running"></i>
-                    <h2>Cardio Adjustments</h2>
-                </div>
-                <p><strong>Current:</strong> 2 one-hour LISS sessions (walking the dog) plus 2 additional 30-minute walks</p>
-                
-                <div class="tabs">
-                    <div class="tab active" data-tab="cardio-phase1">Phase 1 (Days 1-4)</div>
-                    <div class="tab" data-tab="cardio-phase2">Phase 2 (Days 5-8)</div>
-                    <div class="tab" data-tab="cardio-phase3">Phase 3 (Days 9-11)</div>
-                    <div class="tab" data-tab="cardio-phase4">Phase 4 (Day 12)</div>
-                </div>
-                
-                <div class="tab-content active" id="cardio-phase1">
-                    <h3>Phase 1: Increased Caloric Expenditure (Days 1-4: Aug 12-15)</h3>
-                    <ul>
-                        <li>Maintain 2 one-hour LISS sessions</li>
-                        <li>Add 2 additional 30-minute sessions</li>
-                        <li>Consider adding 1 HIIT session (15-20 minutes) if back/hip allows</li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="cardio-phase2">
-                    <h3>Phase 2: Maintained Expenditure (Days 5-8: Aug 16-19)</h3>
-                    <ul>
-                        <li>Maintain 2 one-hour LISS sessions</li>
-                        <li>Maintain 2 additional 30-minute sessions</li>
-                        <li>Replace HIIT with moderate-intensity steady state (MISS) if previously added</li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="cardio-phase3">
-                    <h3>Phase 3: Reduced Cardio (Days 9-11: Aug 20-22)</h3>
-                    <ul>
-                        <li>Reduce to 2 one-hour LISS sessions only</li>
-                        <li>Eliminate additional cardio sessions</li>
-                        <li>Focus on recovery</li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="cardio-phase4">
-                    <h3>Phase 4: Minimal Activity (Day 12: Aug 23)</h3>
-                    <ul>
-                        <li>Light walking only if desired</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Carbohydrate and Sodium Manipulation -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-balance-scale"></i>
-                    <h2>Carbohydrate and Sodium Manipulation</h2>
-                </div>
-                
-                <div class="cards">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Carbohydrate Manipulation</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><strong>Days 1-4 (Aug 12-15):</strong> Moderate carb intake (130-140g daily)</li>
-                                <li><strong>Days 5-8 (Aug 16-19):</strong> Reduced carb intake (100-110g daily)</li>
-                                <li><strong>Days 9-11 (Aug 20-22):</strong> Lowest carb intake (80-90g daily)</li>
-                                <li><strong>Day 12 (Aug 23):</strong> Strategic carb loading (250-300g) to improve muscle fullness</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Sodium Manipulation</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><strong>Days 1-7 (Aug 12-18):</strong> Normal sodium intake (no added restriction)</li>
-                                <li><strong>Day 8 (Aug 19):</strong> Reduce sodium by 25%</li>
-                                <li><strong>Day 9 (Aug 20):</strong> Reduce sodium by 50%</li>
-                                <li><strong>Day 10 (Aug 21):</strong> Reduce sodium by 75%</li>
-                                <li><strong>Day 11 (Aug 22):</strong> Minimal sodium intake</li>
-                                <li><strong>Day 12 (Aug 23):</strong> Moderate sodium reintroduction with carb load</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Hydration Protocol -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-tint"></i>
-                    <h2>Hydration Protocol</h2>
-                </div>
-                <p><strong>Current:</strong> 0.8-1 gallon daily</p>
-                
-                <div class="cards">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Days 1-7: 1 Gallon Daily</h3>
-                            <div class="card-days">August 12-18, 2025</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-date">Target: 1 gallon daily</div>
-                            <p><strong>Instructions:</strong> Maintain consistent hydration throughout the day. Drink water evenly spaced, aiming for 8-10 glasses. Monitor urine color to ensure it's pale yellow.</p>
-                            
-                            <table class="hydration-table">
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Amount</th>
-                                    <th>Instructions</th>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Upon Waking (4:00 PM)</td>
-                                    <td>16 oz</td>
-                                    <td>Drink immediately after waking to rehydrate after sleep</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Meal (4:30 PM)</td>
-                                    <td>8 oz</td>
-                                    <td>Drink before your first meal to aid digestion</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Training (5:30-6:30 PM)</td>
-                                    <td>24 oz</td>
-                                    <td>Sip throughout workout (8 oz every 20 minutes)</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Post-Workout (7:00 PM)</td>
-                                    <td>16 oz</td>
-                                    <td>Replenish fluids lost during training</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Work (8:30 PM)</td>
-                                    <td>8 oz</td>
-                                    <td>Hydrate before starting your shift</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Shift (9:00 PM - 7:00 AM)</td>
-                                    <td>64 oz</td>
-                                    <td>Divide into 8 oz servings every hour</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Before Bed (7:30 AM)</td>
-                                    <td>16 oz</td>
-                                    <td>Final hydration before sleep</td>
-                                </tr>
-                            </table>
-                            
-                            <p><strong>Additional Tips:</strong></p>
-                            <ul>
-                                <li>Keep a large water bottle at your workstation as a visual reminder</li>
-                                <li>Set phone alarms every 90 minutes to remind yourself to drink</li>
-                                <li>Monitor urine color - it should be pale yellow, not dark</li>
-                                <li>If you feel hungry, try drinking water first as thirst can be mistaken for hunger</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Days 8-10: 1.5 Gallons Daily</h3>
-                            <div class="card-days">August 19-21, 2025</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-date">Target: 1.5 gallons daily</div>
-                            <p><strong>Instructions:</strong> Increase water intake significantly to help flush out sodium and reduce water retention. This is crucial for achieving a leaner appearance by the wedding day.</p>
-                            
-                            <table class="hydration-table">
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Amount</th>
-                                    <th>Instructions</th>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Upon Waking (4:00 PM)</td>
-                                    <td>20 oz</td>
-                                    <td>Drink immediately to kickstart hydration</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Meal (4:30 PM)</td>
-                                    <td>12 oz</td>
-                                    <td>Drink before your first meal</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Training (5:30-6:30 PM)</td>
-                                    <td>32 oz</td>
-                                    <td>Sip consistently throughout workout</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Post-Workout (7:00 PM)</td>
-                                    <td>20 oz</td>
-                                    <td>Replenish fluids lost during training</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Work (8:30 PM)</td>
-                                    <td>12 oz</td>
-                                    <td>Hydrate before starting your shift</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Shift (9:00 PM - 7:00 AM)</td>
-                                    <td>96 oz</td>
-                                    <td>Drink 12 oz every hour on the hour</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Before Bed (7:30 AM)</td>
-                                    <td>20 oz</td>
-                                    <td>Final hydration before sleep</td>
-                                </tr>
-                            </table>
-                            
-                            <p><strong>Additional Tips:</strong></p>
-                            <ul>
-                                <li>Use a marked water bottle or container to track intake</li>
-                                <li>Consider adding lemon or cucumber for flavor if needed</li>
-                                <li>Expect more frequent urination - this is normal and part of the process</li>
-                                <li>If you feel dizzy or lightheaded, ensure you're also getting adequate electrolytes</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Day 11: 0.5 Gallon (First Half of Day)</h3>
-                            <div class="card-days">August 22, 2025</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-date">Target: 0.5 gallon (first half of day only)</div>
-                            <p><strong>Instructions:</strong> Drink most of your water in the morning and early afternoon. Stop drinking water by 3-4 PM to allow your body to shed excess water overnight. This helps achieve a drier, more defined look.</p>
-                            
-                            <table class="hydration-table">
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Amount</th>
-                                    <th>Instructions</th>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Upon Waking (4:00 PM)</td>
-                                    <td>16 oz</td>
-                                    <td>Drink immediately after waking</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Meal (4:30 PM)</td>
-                                    <td>12 oz</td>
-                                    <td>Drink before your first meal</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Training (5:30-6:30 PM)</td>
-                                    <td>24 oz</td>
-                                    <td>Sip throughout workout (8 oz every 20 minutes)</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Post-Workout (7:00 PM)</td>
-                                    <td>16 oz</td>
-                                    <td>Replenish fluids lost during training</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Work (8:30 PM)</td>
-                                    <td>8 oz</td>
-                                    <td>Small amount before starting your shift</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Early Shift (9:00 PM - 12:00 AM)</td>
-                                    <td>16 oz</td>
-                                    <td>Small sips only during first 3 hours of shift</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">After 12:00 AM</td>
-                                    <td>0 oz</td>
-                                    <td>NO WATER after midnight</td>
-                                </tr>
-                            </table>
-                            
-                            <p><strong>Additional Tips:</strong></p>
-                            <ul>
-                                <li>Set a strict alarm for 12:00 AM to remind yourself to stop drinking</li>
-                                <li>Keep water out of sight after midnight to avoid temptation</li>
-                                <li>You may feel thirsty in the early morning - this is normal</li>
-                                <li>Focus on the goal: achieving a dry, defined look for the wedding</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Day 12: Sip As Needed</h3>
-                            <div class="card-days">August 23, 2025</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-date">Target: Sip as needed</div>
-                            <p><strong>Instructions:</strong> Only sip water when thirsty. Focus on appearance rather than hydration. Avoid large amounts of water to prevent bloating. Use small sips to stay comfortable without retaining water.</p>
-                            
-                            <table class="hydration-table">
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Amount</th>
-                                    <th>Instructions</th>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Upon Waking (4:00 PM)</td>
-                                    <td>4 oz</td>
-                                    <td>Small sip to wet your mouth only</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Meal (4:30 PM)</td>
-                                    <td>4 oz</td>
-                                    <td>Minimal amount to aid swallowing</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Day (5:00 PM - 8:00 PM)</td>
-                                    <td>8 oz</td>
-                                    <td>Only if absolutely necessary, in small sips</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">Pre-Wedding (2-3 hours before)</td>
-                                    <td>0 oz</td>
-                                    <td>NO WATER in the hours before the wedding</td>
-                                </tr>
-                                <tr>
-                                    <td class="time-slot">During Wedding</td>
-                                    <td>Minimal sips</td>
-                                    <td>Only if absolutely necessary, avoid bloating</td>
-                                </tr>
-                            </table>
-                            
-                            <p><strong>Additional Tips:</strong></p>
-                            <ul>
-                                <li>Today is about appearance, not hydration</li>
-                                <li>Use mouthwash or chew gum if your mouth feels dry</li>
-                                <li>Focus on the carb loading to pull water into muscles</li>
-                                <li>Remember this is temporary - you can hydrate normally after the wedding</li>
-                                <li>If you feel dizzy or lightheaded, take a small sip and sit down</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Recovery Recommendations -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-bed"></i>
-                    <h2>Recovery Recommendations for Night Shift Workers</h2>
-                </div>
-                
-                <div class="tabs">
-                    <div class="tab active" data-tab="sleep">Sleep Optimization</div>
-                    <div class="tab" data-tab="nutrition">Nutrition Timing</div>
-                    <div class="tab" data-tab="supplements">Supplement Adjustments</div>
-                    <div class="tab" data-tab="recovery">Additional Recovery</div>
-                </div>
-                
-                <div class="tab-content active" id="sleep">
-                    <h3>Sleep Optimization</h3>
-                    <ul>
-                        <li>Maintain consistent 8am-4pm sleep schedule</li>
-                        <li>Create a completely dark sleep environment (blackout curtains, eye mask)</li>
-                        <li>Keep bedroom temperature cool (65-68°F)</li>
-                        <li>Use white noise to block daytime sounds</li>
-                        <li>Avoid screens for 1 hour before bed</li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="nutrition">
-                    <h3>Nutrition Timing</h3>
-                    <ul>
-                        <li><strong>First meal:</strong> Upon waking (around 4-5pm)</li>
-                        <li><strong>Second meal:</strong> Around 11pm-midnight (during shift)</li>
-                        <li><strong>Snack:</strong> Post-shift (around 7am) if needed</li>
-                        <li>Avoid eating during sleep hours (8am-4pm)</li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="supplements">
-                    <h3>Supplement Adjustments</h3>
-                    <ul>
-                        <li>Continue creatine (5g daily)</li>
-                        <li>Continue whey protein (as needed to meet protein targets)</li>
-                        <li>Consider reducing preworkout/energy drinks in the final 3 days to minimize water retention</li>
-                        <li>Continue multivitamin</li>
-                        <li>Add electrolyte supplementation during lower sodium phases</li>
-                    </ul>
-                </div>
-                
-                <div class="tab-content" id="recovery">
-                    <h3>Additional Recovery Strategies</h3>
-                    <ul>
-                        <li>Daily stretching focusing on hip flexors and lower back</li>
-                        <li>Foam rolling 3-4 times per week</li>
-                        <li>Contrast showers (hot/cold) after training sessions</li>
-                        <li>Consider 10-minute meditation sessions before bed to improve sleep quality</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Exercise Modifications -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h2>Exercise Modifications for Back/Hip Issues</h2>
-                </div>
-                
-                <div class="cards">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Replace/Modify</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Barbell squats → Hack squats, leg press, or split squats (which he's already doing)</li>
-                                <li>Deadlifts → Romanian deadlifts with lighter weight, glute bridges, or hip thrusts</li>
-                                <li>Any exercise causing pain → Alternative that doesn't aggravate the area</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>Focus on</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>Core strengthening exercises that don't strain the lower back (planks, bird-dog)</li>
-                                <li>Hip mobility work (dynamic stretching, foam rolling)</li>
-                                <li>Maintaining proper form on all exercises</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Sample Daily Schedule -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-calendar-day"></i>
-                    <h2>Sample Daily Schedule (Night Shift Days)</h2>
-                </div>
-                
-                <div class="schedule">
-                    <div class="schedule-item">
-                        <span class="schedule-time">4:00pm:</span> Wake up, hydrate
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">4:30pm:</span> Meal 1 (high protein, moderate carbs/fats)
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">5:30pm:</span> Training session (if scheduled)
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">7:00pm:</span> Post-workout nutrition
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">8:00pm:</span> Prepare for work
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">9:00pm:</span> Begin shift
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">11:00pm:</span> Meal 2 (high protein, lower carbs/fats)
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">2:00am:</span> Snack (if needed)
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">7:00am:</span> End shift, light snack if desired
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">7:30am:</span> Wind down routine
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-time">8:00am-4:00pm:</span> Sleep
-                    </div>
-                </div>
-            </section>
-
-            <!-- Monitoring and Adjustments -->
-            <section class="section">
-                <div class="section-header">
-                    <i class="fas fa-chart-line"></i>
-                    <h2>Monitoring and Adjustments</h2>
-                </div>
-                
+            <div class="tips-section">
+                <h3><i class="fas fa-microscope"></i> Scientific Foundation</h3>
+                <p>This plan is based on the latest research in:</p>
                 <ul>
-                    <li>Weigh daily upon waking (same time, same conditions)</li>
-                    <li>Adjust calories if weight loss is too rapid or too slow</li>
-                    <li>Monitor energy levels and adjust training if needed</li>
-                    <li>Pay attention to hunger signals and adjust meal timing if needed</li>
-                    <li>If back/hip pain increases, reduce training volume further</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Optimal protein intake</strong> for muscle preservation during weight loss (1.6-2.4g/kg)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Metabolic adaptation management</strong> through strategic diet breaks</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Circadian rhythm optimization</strong> for night shift workers</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>HIIT vs LISS cardio efficiency</strong> for busy professionals</li>
                 </ul>
-                
-                <p>This plan is aggressive but designed to help Michael reach his goal while preserving muscle mass and considering his work schedule and physical limitations. The combination of caloric reduction, strategic carb and sodium manipulation, and training tapering should create the optimal conditions for him to reach 200lbs or below by his wedding day.</p>
-            </section>
-
-            <!-- Disclaimer -->
-            <section class="disclaimer">
-                <h3><i class="fas fa-exclamation-triangle"></i> Disclaimer</h3>
-                <p>This program is designed specifically for Michael Ely based on his current physical condition, goals, and lifestyle. The information provided is not intended as medical advice. Before starting any new fitness or nutrition program, please consult with a healthcare professional. MyDailyAgency is not responsible for any injuries or health issues that may result from following this program without proper medical supervision. Individual results may vary.</p>
-            </section>
+            </div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>MyDailyAgency</h3>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+        <div id="calculator" class="tab-content">
+            <h2>Auto-regulating Calorie Calculator</h2>
+            <p>This calculator adjusts your weekly calories based on your previous week's weight loss progress. Enter your results to get personalized recommendations.</p>
+            
+            <div class="calculator">
+                <h3>Last Week's Progress</h3>
+                <input type="number" id="lastWeekWeightLoss" placeholder="Last Week's Weight Loss (lbs)" step="0.1">
+                <input type="number" id="lastWeekCalories" placeholder="Last Week's Daily Calories">
+                <input type="number" id="currentWeight" placeholder="Current Weight (lbs)">
+                
+                <button onclick="calculateCalories()">Calculate This Week's Calories</button>
+                
+                <div id="calorieResult" class="result" style="display: none;">
+                    <h3>Your Recommended Calories for This Week:</h3>
+                    <p id="calorieOutput"></p>
+                    <p id="adjustmentReason"></p>
                 </div>
             </div>
-            <p>&copy; 2025 MyDailyAgency. All rights reserved.</p>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-chart-line"></i> Auto-regulation Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Losing 1.5-2 lbs/week:</strong> Keep calories the same</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Losing less than 1 lb/week:</strong> Decrease by 150-200 calories</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Losing more than 2 lbs/week:</strong> Increase by 150-200 calories</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>No weight loss:</strong> Decrease by 200-300 calories</li>
+                </ul>
+            </div>
         </div>
-    </footer>
+
+        <div id="nutrition" class="tab-content">
+            <h2>Nutrition Plan</h2>
+            <p>Your nutrition plan is designed to maximize fat loss while preserving muscle mass, with flexibility to fit your night shift schedule.</p>
+            
+            <div class="calculator">
+                <h3>Macronutrient Calculator</h3>
+                <input type="number" id="macroWeight" placeholder="Weight (lbs)" value="210">
+                <input type="number" id="macroCalories" placeholder="Daily Calories" value="2100">
+                <button onclick="calculateMacros()">Calculate Macros</button>
+                
+                <div id="macroResult" class="result" style="display: none;">
+                    <h3>Your Daily Macronutrients:</h3>
+                    <p id="proteinOutput"></p>
+                    <p id="carbOutput"></p>
+                    <p id="fatOutput"></p>
+                </div>
+            </div>
+
+            <div class="meal-plan">
+                <div class="meal-card">
+                    <h3><i class="fas fa-drumstick-bite"></i> Protein Sources</h3>
+                    <ul>
+                        <li>Chicken breast (165g = 31g protein)</li>
+                        <li>Salmon (165g = 34g protein)</li>
+                        <li>Lean beef (165g = 31g protein)</li>
+                        <li>Eggs (2 large = 12g protein)</li>
+                        <li>Greek yogurt (170g = 17g protein)</li>
+                        <li>Whey protein (1 scoop = 25g protein)</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-card">
+                    <h3><i class="fas fa-bread-slice"></i> Complex Carbs</h3>
+                    <ul>
+                        <li>Brown rice (1 cup cooked = 45g carbs)</li>
+                        <li>Oatmeal (1 cup cooked = 27g carbs)</li>
+                        <li>Sweet potato (1 medium = 24g carbs)</li>
+                        <li>Quinoa (1 cup cooked = 39g carbs)</li>
+                        <li>Whole grain bread (2 slices = 24g carbs)</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-card">
+                    <h3><i class="fas fa-cheese"></i> Healthy Fats</h3>
+                    <ul>
+                        <li>Avocado (1/2 medium = 15g fat)</li>
+                        <li>Almonds (1 oz = 14g fat)</li>
+                        <li>Olive oil (1 tbsp = 14g fat)</li>
+                        <li>Chia seeds (1 tbsp = 4g fat)</li>
+                        <li>Peanut butter (2 tbsp = 16g fat)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-clipboard-list"></i> Nutrition Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Protein:</strong> 1.6-2.4g per kg of bodyweight daily</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Carbs:</strong> 40-50% of total calories</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Fats:</strong> 25-35% of total calories</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Fiber:</strong> 25-35g daily</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Water:</strong> 1 gallon daily</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="workout" class="tab-content">
+            <h2>Workout Plan</h2>
+            <p>Flexible 3-day weight training program designed for your schedule with home and gym options.</p>
+            
+            <div class="workout-plan">
+                <div class="workout-card">
+                    <h3><i class="fas fa-arrow-up"></i> Upper Body Focus</h3>
+                    <ul class="exercise-list">
+                        <li><i class="fas fa-angle-right"></i> <strong>Bench Press:</strong> 4 sets x 8-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Shoulder Press:</strong> 3 sets x 10-15 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Lat Pulldowns:</strong> 4 sets x 10-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Bicep Curls:</strong> 3 sets x 10-15 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Tricep Extensions:</strong> 3 sets x 10-15 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Face Pulls:</strong> 3 sets x 15-20 reps</li>
+                    </ul>
+                </div>
+                
+                <div class="workout-card">
+                    <h3><i class="fas fa-arrow-down"></i> Lower Body Focus</h3>
+                    <ul class="exercise-list">
+                        <li><i class="fas fa-angle-right"></i> <strong>Squats:</strong> 4 sets x 8-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Romanian Deadlifts:</strong> 3 sets x 10-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Leg Press:</strong> 3 sets x 12-15 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Leg Curls:</strong> 3 sets x 12-15 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Calf Raises:</strong> 4 sets x 15-20 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Planks:</strong> 3 sets x 30-60 seconds</li>
+                    </ul>
+                </div>
+                
+                <div class="workout-card">
+                    <h3><i class="fas fa-sync-alt"></i> Full Body</h3>
+                    <ul class="exercise-list">
+                        <li><i class="fas fa-angle-right"></i> <strong>Incline Bench:</strong> 3 sets x 10-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Split Squats:</strong> 3 sets x 10-12 reps per leg</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Bent Over Rows:</strong> 3 sets x 10-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Overhead Press:</strong> 3 sets x 10-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Pull-ups/Lat Pulldowns:</strong> 3 sets x 8-12 reps</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Leg Press:</strong> 3 sets x 12-15 reps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-lightbulb"></i> Workout Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Progressive Overload:</strong> Increase weight or reps each week</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Rest Periods:</strong> 60-90 seconds between sets</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Flexibility:</strong> Can be done on any 3 days of the week</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Exercise Substitutions:</strong> Swap similar movements as needed</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Intensity:</strong> Train close to failure (1-2 reps in reserve)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="cardio" class="tab-content">
+            <h2>Cardio Plan</h2>
+            <p>Strategic 2-day cardio plan combining HIIT efficiency with LISS sustainability for optimal fat loss.</p>
+            
+            <div class="workout-plan">
+                <div class="workout-card">
+                    <h3><i class="fas fa-fire"></i> HIIT Session (Day 1)</h3>
+                    <ul class="exercise-list">
+                        <li><i class="fas fa-angle-right"></i> <strong>Warm-up:</strong> 5 minutes light cardio</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Work Interval:</strong> 30 seconds maximum effort</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Rest Interval:</strong> 60 seconds recovery</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Repeat:</strong> 8-12 rounds</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Cool-down:</strong> 5 minutes light cardio</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Total Time:</strong> 20-25 minutes</li>
+                    </ul>
+                    <p><strong>Exercise Options:</strong> Sprints, bike sprints, rowing sprints, battle ropes</p>
+                </div>
+                
+                <div class="workout-card">
+                    <h3><i class="fas fa-walking"></i> LISS Session (Day 2)</h3>
+                    <ul class="exercise-list">
+                        <li><i class="fas fa-angle-right"></i> <strong>Activity:</strong> Steady-state cardio</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Intensity:</strong> 60-70% max heart rate</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Duration:</strong> 45-60 minutes</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Pace:</strong> Able to hold conversation</li>
+                        <li><i class="fas fa-angle-right"></i> <strong>Options:</strong> Walking, cycling, elliptical, stair climber</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-heartbeat"></i> Cardio Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>HIIT Benefits:</strong> Time-efficient, metabolic boost, muscle preservation</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>LISS Benefits:</strong> Sustainable, recovery-friendly, fat oxidation</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Scheduling:</strong> Can be done on any 2 days, separate from lifting</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Progression:</strong> Increase HIIT rounds or LISS duration weekly</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="meal-timing" class="tab-content">
+            <h2>Meal Timing Strategy</h2>
+            <p>Optimized meal timing for night shift work to align with your circadian rhythm and maximize fat loss.</p>
+            
+            <div class="meal-plan">
+                <div class="meal-card">
+                    <h3><i class="fas fa-sun"></i> Pre-Shift Meal (6-7 PM)</h3>
+                    <ul>
+                        <li>40g protein</li>
+                        <li>60g complex carbs</li>
+                        <li>15g healthy fats</li>
+                        <li>Example: Chicken breast, brown rice, vegetables</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-card">
+                    <h3><i class="fas fa-moon"></i> During Shift Snack (10-11 PM)</h3>
+                    <ul>
+                        <li>20g protein</li>
+                        <li>15g carbs</li>
+                        <li>10g fats</li>
+                        <li>Example: Greek yogurt, almonds, berries</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-card">
+                    <h3><i class="fas fa-cloud-sun"></i> Post-Shift Meal (6-7 AM)</h3>
+                    <ul>
+                        <li>40g protein</li>
+                        <li>30g carbs</li>
+                        <li>15g fats</li>
+                        <li>Example: Protein shake, eggs, avocado</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-card">
+                    <h3><i class="fas fa-bed"></i> Sleep Time Meal (1-2 PM)</h3>
+                    <ul>
+                        <li>30g protein</li>
+                        <li>20g carbs</li>
+                        <li>10g fats</li>
+                        <li>Example: Cottage cheese, fruit, nuts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-clock"></i> Night Shift Nutrition Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Front-load calories:</strong> 70% of daily protein before midnight</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Avoid late-night eating:</strong> Minimize food between midnight-6 AM</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Hydration:</strong> 1 gallon water throughout shift</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Caffeine timing:</strong> Limit to first half of shift</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Circadian alignment:</strong> Maintain consistent meal times</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="diet-break" class="tab-content">
+            <h2>Diet Break Protocol</h2>
+            <p>Strategic diet break at 200lbs to prevent metabolic adaptation and improve long-term adherence.</p>
+            
+            <div class="calculator">
+                <h3>Diet Break Calculator</h3>
+                <input type="number" id="breakWeight" placeholder="Current Weight (lbs)" value="210">
+                <input type="number" id="breakCalories" placeholder="Current Daily Calories" value="2100">
+                <button onclick="calculateDietBreak()">Calculate Diet Break Calories</button>
+                
+                <div id="breakResult" class="result" style="display: none;">
+                    <h3>Your Diet Break Plan:</h3>
+                    <p id="breakOutput"></p>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-utensils"></i> Diet Break Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Trigger:</strong> When you reach 200lbs</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Duration:</strong> 5-7 days at maintenance calories</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Calories:</strong> Increase to conservative maintenance (2200-2400 calories)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Macros:</strong> Increase carbs, maintain protein</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Benefits:</strong> Reset leptin levels, improve adherence, prevent plateau</li>
+                </ul>
+            </div>
+
+            <div class="supplement-card">
+                <h3><i class="fas fa-calendar-day"></i> Sample Diet Break Day:</h3>
+                <ul>
+                    <li><i class="fas fa-angle-right"></i> <strong>Breakfast:</strong> Oatmeal with berries, protein shake</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Lunch:</strong> Large chicken salad with whole grain roll</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Dinner:</strong> Salmon with sweet potato and vegetables</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Snacks:</strong> Fruit, nuts, Greek yogurt</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="supplements" class="tab-content">
+            <h2>Supplement Recommendations</h2>
+            <p>Evidence-based supplement stack to support fat loss, muscle preservation, and overall health.</p>
+            
+            <div class="supplement-card">
+                <h3><i class="fas fa-capsules"></i> Core Supplements</h3>
+                <ul>
+                    <li><i class="fas fa-angle-right"></i> <strong>Whey Protein:</strong> 1-2 scoops daily (25-50g protein)</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Creatine Monohydrate:</strong> 5g daily</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Multivitamin:</strong> 1 serving daily</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Fish Oil:</strong> 2-3g EPA/DHA daily</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Vitamin D3:</strong> 2000-5000 IU daily</li>
+                </ul>
+            </div>
+
+            <div class="supplement-card">
+                <h3><i class="fas fa-fire-alt"></i> Optional Fat Loss Support</h3>
+                <ul>
+                    <li><i class="fas fa-angle-right"></i> <strong>Caffeine:</strong> 200-400mg pre-workout</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Green Tea Extract:</strong> 500mg daily</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>L-Carnitine:</strong> 2g daily</li>
+                    <li><i class="fas fa-angle-right"></i> <strong>Probiotics:</strong> For gut health</li>
+                </ul>
+            </div>
+
+            <div class="tips-section">
+                <h3><i class="fas fa-tint"></i> Hydration Guidelines:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Daily Target:</strong> 1 gallon (128 oz) minimum</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>During Shift:</strong> 32 oz every 2 hours</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Pre/Post Workout:</strong> 16-24 oz each</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Electrolytes:</strong> Add pinch of salt to water</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Monitoring:</strong> Urine should be pale yellow</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <h3><i class="fas fa-exclamation-triangle"></i> Important Disclaimer</h3>
+            <p>This fitness and nutrition plan is designed for educational purposes and is not intended as medical advice. Please consult with a healthcare professional before beginning any new diet or exercise program, especially if you have pre-existing health conditions or injuries.</p>
+            <p>Individual results may vary. The information provided is based on general scientific principles and should be adapted to your personal needs and circumstances. MyDailyAgency is not responsible for any injuries or health issues that may result from following this plan.</p>
+            <p>This plan is specifically designed for Michael Ely based on his personal information, goals, and lifestyle. It should not be shared or used by others without proper consultation with a qualified fitness or medical professional.</p>
+        </div>
+    </div>
 
     <script>
-        // Workout data for each day
-        const workoutData = {
-            day1: {
-                date: "August 12, 2025",
-                phase: "Phase 1: Accelerated Fat Loss",
-                type: "Upper Body Workout",
-                exercises: [
-                    { name: "Bench Press", sets: 3, reps: "8-10", rest: "90s" },
-                    { name: "Incline Dumbbell Press", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Seated Cable Rows", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Lat Pulldowns", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Overhead Press", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Dumbbell Lateral Raises", sets: 3, reps: "12-15", rest: "60s" },
-                    { name: "Tricep Pushdowns", sets: 3, reps: "12-15", rest: "60s" },
-                    { name: "Dumbbell Bicep Curls", sets: 3, reps: "12-15", rest: "60s" }
-                ],
-                notes: "Focus on controlled movements, especially on back exercises to protect your lower back. Maintain same weight as usual but reduce sets by 1 from your normal routine. Keep rest periods consistent."
-            },
-            day2: {
-                date: "August 13, 2025",
-                phase: "Phase 1: Accelerated Fat Loss",
-                type: "Lower Body Workout",
-                exercises: [
-                    { name: "Hack Squats", sets: 3, reps: "10-12", rest: "120s" },
-                    { name: "Leg Press", sets: 3, reps: "12-15", rest: "90s" },
-                    { name: "Romanian Deadlifts (light)", sets: 3, reps: "10-12", rest: "90s" },
-                    { name: "Leg Extensions", sets: 3, reps: "12-15", rest: "75s" },
-                    { name: "Seated Leg Curls", sets: 3, reps: "12-15", rest: "75s" },
-                    { name: "Standing Calf Raises", sets: 3, reps: "15-20", rest: "60s" },
-                    { name: "Seated Calf Raises", sets: 3, reps: "15-20", rest: "60s" }
-                ],
-                notes: "Avoid barbell squats to protect your back. Keep Romanian deadlifts light and focus on form. Control the eccentric (lowering) portion of each movement."
-            },
-            day3: {
-                date: "August 14, 2025",
-                phase: "Phase 1: Accelerated Fat Loss",
-                type: "Full Body Workout",
-                exercises: [
-                    { name: "Bench Press", sets: 3, reps: "8-10", rest: "90s" },
-                    { name: "Hack Squats", sets: 3, reps: "10-12", rest: "120s" },
-                    { name: "Seated Cable Rows", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Overhead Press", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Leg Extensions", sets: 3, reps: "12-15", rest: "75s" },
-                    { name: "Lat Pulldowns", sets: 3, reps: "10-12", rest: "75s" },
-                    { name: "Dumbbell Lateral Raises", sets: 3, reps: "12-15", rest: "60s" },
-                    { name: "Seated Leg Curls", sets: 3, reps: "12-15", rest: "75s" }
-                ],
-                notes: "Keep intensity high but reduce volume by 20% from your normal full body routine. Focus on compound movements to maximize efficiency. Pay extra attention to form on all exercises."
-            },
-            day4: {
-                date: "August 15, 2025",
-                phase: "Phase 1: Accelerated Fat Loss",
-                type: "Cardio Day",
-                exercises: [
-                    { name: "Morning LISS", sets: "N/A", reps: "N/A", rest: "60 minutes" },
-                    { name: "Afternoon LISS", sets: "N/A", reps: "N/A", rest: "30 minutes" },
-                    { name: "Evening HIIT (Optional)", sets: "N/A", reps: "N/A", rest: "15-20 minutes" }
-                ],
-                notes: "HIIT should only be performed if it doesn't aggravate your back/hip issues. Focus on low-impact cardio options like cycling or elliptical if available. Stay hydrated during all cardio sessions."
-            },
-            day5: {
-                date: "August 16, 2025",
-                phase: "Phase 2: Strategic Reduction",
-                type: "Upper Body Workout",
-                exercises: [
-                    { name: "Bench Press", sets: 2, reps: "8-10", rest: "90s" },
-                    { name: "Incline Dumbbell Press", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Seated Cable Rows", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Lat Pulldowns", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Overhead Press", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Dumbbell Lateral Raises", sets: 2, reps: "12-15", rest: "60s" },
-                    { name: "Tricep Pushdowns", sets: 2, reps: "12-15", rest: "60s" },
-                    { name: "Dumbbell Bicep Curls", sets: 2, reps: "12-15", rest: "60s" }
-                ],
-                notes: "Stop each set 1-2 reps before failure. Maintain the same weights as Phase 1. Focus on mind-muscle connection."
-            },
-            day6: {
-                date: "August 17, 2025",
-                phase: "Phase 2: Strategic Reduction",
-                type: "Lower Body Workout",
-                exercises: [
-                    { name: "Hack Squats", sets: 2, reps: "10-12", rest: "120s" },
-                    { name: "Leg Press", sets: 2, reps: "12-15", rest: "90s" },
-                    { name: "Romanian Deadlifts (light)", sets: 2, reps: "10-12", rest: "90s" },
-                    { name: "Leg Extensions", sets: 2, reps: "12-15", rest: "75s" },
-                    { name: "Seated Leg Curls", sets: 2, reps: "12-15", rest: "75s" },
-                    { name: "Standing Calf Raises", sets: 2, reps: "15-20", rest: "60s" },
-                    { name: "Seated Calf Raises", sets: 2, reps: "15-20", rest: "60s" }
-                ],
-                notes: "Stop each set 1-2 reps before failure. Focus on controlled movements. Pay extra attention to hip alignment during leg exercises."
-            },
-            day7: {
-                date: "August 18, 2025",
-                phase: "Phase 2: Strategic Reduction",
-                type: "Full Body Workout",
-                exercises: [
-                    { name: "Bench Press", sets: 2, reps: "8-10", rest: "90s" },
-                    { name: "Hack Squats", sets: 2, reps: "10-12", rest: "120s" },
-                    { name: "Seated Cable Rows", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Overhead Press", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Leg Extensions", sets: 2, reps: "12-15", rest: "75s" },
-                    { name: "Lat Pulldowns", sets: 2, reps: "10-12", rest: "75s" },
-                    { name: "Dumbbell Lateral Raises", sets: 2, reps: "12-15", rest: "60s" },
-                    { name: "Seated Leg Curls", sets: 2, reps: "12-15", rest: "75s" }
-                ],
-                notes: "Stop each set 1-2 reps before failure. Maintain intensity with reduced volume. Focus on form and muscle engagement."
-            },
-            day8: {
-                date: "August 19, 2025",
-                phase: "Phase 2: Strategic Reduction",
-                type: "Cardio Day",
-                exercises: [
-                    { name: "Morning LISS", sets: "N/A", reps: "N/A", rest: "60 minutes" },
-                    { name: "Afternoon LISS", sets: "N/A", reps: "N/A", rest: "30 minutes" },
-                    { name: "Evening MISS", sets: "N/A", reps: "N/A", rest: "20-25 minutes" }
-                ],
-                notes: "MISS (Moderate-Intensity Steady State) is less stressful on the body than HIIT. Good options include cycling, elliptical, or incline walking. Focus on maintaining a steady pace."
-            },
-            day9: {
-                date: "August 20, 2025",
-                phase: "Phase 3: Peak Week Taper",
-                type: "Upper Body Workout",
-                exercises: [
-                    { name: "Bench Press (lighter)", sets: 2, reps: "12-15", rest: "60s" },
-                    { name: "Seated Cable Rows", sets: 2, reps: "12-15", rest: "60s" },
-                    { name: "Overhead Press (lighter)", sets: 2, reps: "12-15", rest: "60s" },
-                    { name: "Lat Pulldowns", sets: 1, reps: "15-20", rest: "45s" },
-                    { name: "Dumbbell Lateral Raises", sets: 1, reps: "15-20", rest: "45s" },
-                    { name: "Tricep Pushdowns", sets: 1, reps: "15-20", rest: "45s" }
-                ],
-                notes: "Reduce weight by 20-30% from your normal working weight. Focus on muscle pump and mind-muscle connection. This is a deload week to promote recovery and glycogen storage."
-            },
-            day10: {
-                date: "August 21, 2025",
-                phase: "Phase 3: Peak Week Taper",
-                type: "Lower Body Workout",
-                exercises: [
-                    { name: "Hack Squats (lighter)", sets: 2, reps: "12-15", rest: "90s" },
-                    { name: "Leg Press", sets: 2, reps: "15-20", rest: "75s" },
-                    { name: "Leg Extensions", sets: 1, reps: "15-20", rest: "60s" },
-                    { name: "Seated Leg Curls", sets: 1, reps: "15-20", rest: "60s" },
-                    { name: "Standing Calf Raises", sets: 1, reps: "20-25", rest: "45s" }
-                ],
-                notes: "Reduce weight by 20-30% from your normal working weight. Avoid any exercises that cause discomfort to your back/hip. Focus on controlled movements and muscle contraction."
-            },
-            day11: {
-                date: "August 22, 2025",
-                phase: "Phase 3: Peak Week Taper",
-                type: "Full Body Workout",
-                exercises: [
-                    { name: "Bench Press (lighter)", sets: 1, reps: "12-15", rest: "60s" },
-                    { name: "Hack Squats (lighter)", sets: 1, reps: "12-15", rest: "90s" },
-                    { name: "Seated Cable Rows", sets: 1, reps: "12-15", rest: "60s" },
-                    { name: "Overhead Press (lighter)", sets: 1, reps: "12-15", rest: "60s" },
-                    { name: "Leg Extensions", sets: 1, reps: "15-20", rest: "60s" }
-                ],
-                notes: "This is your final workout before the wedding. Reduce weight by 30% from your normal working weight. Focus on getting a good pump and feeling the muscles work. This workout should leave you feeling energized, not exhausted."
-            },
-            day12: {
-                date: "August 23, 2025",
-                phase: "Phase 4: Rehydration and Carb Load",
-                type: "Rest Day",
-                exercises: [
-                    { name: "Morning Walk", sets: "N/A", reps: "N/A", rest: "20-30 minutes" },
-                    { name: "Stretching", sets: "N/A", reps: "N/A", rest: "15-20 minutes" },
-                    { name: "Foam Rolling", sets: "N/A", reps: "N/A", rest: "10-15 minutes" }
-                ],
-                notes: "Today is about recovery and looking your best for the wedding. Stay hydrated but don't overdo it (follow hydration protocol). Get plenty of rest and focus on mental preparation. Enjoy your special day!"
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabs;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
             }
-        };
-
-        // Generate calendar
-        function generateCalendar() {
-            const calendar = document.getElementById('calendar');
-            const daysInMonth = 12;
-            
-            for (let i = 1; i <= daysInMonth; i++) {
-                const dayData = workoutData[`day${i}`];
-                const dayElement = document.createElement('div');
-                dayElement.className = 'calendar-day';
-                dayElement.setAttribute('data-day', `day${i}`);
-                
-                const dayNumber = document.createElement('div');
-                dayNumber.className = 'calendar-day-number';
-                dayNumber.textContent = `Day ${i}`;
-                
-                const dayDate = document.createElement('div');
-                dayDate.className = 'calendar-day-date';
-                dayDate.textContent = dayData.date;
-                
-                const dayType = document.createElement('div');
-                dayType.className = 'calendar-day-type';
-                dayType.textContent = dayData.type;
-                
-                dayElement.appendChild(dayNumber);
-                dayElement.appendChild(dayDate);
-                dayElement.appendChild(dayType);
-                
-                dayElement.addEventListener('click', () => showWorkoutDetails(`day${i}`));
-                
-                calendar.appendChild(dayElement);
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
             }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
 
-        // Show workout details
-        function showWorkoutDetails(day) {
-            const workoutDetails = document.getElementById('workout-details');
-            const dayData = workoutData[day];
-            
-            // Remove active class from all calendar days
-            document.querySelectorAll('.calendar-day').forEach(el => {
-                el.classList.remove('active');
-            });
-            
-            // Add active class to clicked day
-            document.querySelector(`[data-day="${day}"]`).classList.add('active');
-            
-            // Generate workout details HTML
-            let exercisesHTML = '';
-            dayData.exercises.forEach(exercise => {
-                exercisesHTML += `
-                    <tr>
-                        <td>${exercise.name}</td>
-                        <td>${exercise.sets}</td>
-                        <td>${exercise.reps}</td>
-                        <td>${exercise.rest}</td>
-                    </tr>
-                `;
-            });
-            
-            workoutDetails.innerHTML = `
-                <div class="workout-header">
-                    <div class="workout-title">
-                        <h3>${dayData.type}</h3>
-                        <p>${dayData.date}</p>
-                    </div>
-                    <div class="workout-phase">${dayData.phase}</div>
-                </div>
-                
-                <table>
-                    <tr>
-                        <th>Exercise</th>
-                        <th>Sets</th>
-                        <th>Reps</th>
-                        <th>Rest</th>
-                    </tr>
-                    ${exercisesHTML}
-                </table>
-                
-                <div class="workout-notes">
-                    <h4>Notes:</h4>
-                    <p>${dayData.notes}</p>
-                </div>
-            `;
-            
-            workoutDetails.classList.add('active');
+        function calculateCalories() {
+            const lastWeekWeightLoss = parseFloat(document.getElementById('lastWeekWeightLoss').value);
+            const lastWeekCalories = parseFloat(document.getElementById('lastWeekCalories').value);
+            const currentWeight = parseFloat(document.getElementById('currentWeight').value);
+
+            let recommendedCalories = lastWeekCalories;
+            let reason = '';
+
+            // Auto-regulation logic based on weight loss
+            if (lastWeekWeightLoss >= 1.5 && lastWeekWeightLoss <= 2) {
+                recommendedCalories = lastWeekCalories;
+                reason = 'Weight loss is optimal (1.5-2 lbs/week). Maintain current calories.';
+            } else if (lastWeekWeightLoss < 1 && lastWeekWeightLoss > 0) {
+                recommendedCalories = lastWeekCalories - 175;
+                reason = 'Weight loss is slow. Decrease calories by 175 to create larger deficit.';
+            } else if (lastWeekWeightLoss === 0) {
+                recommendedCalories = lastWeekCalories - 250;
+                reason = 'No weight loss. Decrease calories by 250 to create a deficit.';
+            } else if (lastWeekWeightLoss > 2) {
+                recommendedCalories = lastWeekCalories + 175;
+                reason = 'Weight loss is too fast. Increase calories by 175 to preserve muscle.';
+            } else if (lastWeekWeightLoss < 0) {
+                recommendedCalories = lastWeekCalories - 300;
+                reason = 'Weight gain detected. Decrease calories by 300 to create deficit.';
+            }
+
+            document.getElementById('calorieResult').style.display = 'block';
+            document.getElementById('calorieOutput').textContent = `Recommended Calories: ${recommendedCalories} per day`;
+            document.getElementById('adjustmentReason').textContent = reason;
         }
 
-        // Countdown Timer
-        function updateCountdown() {
-            // Set the wedding date (August 24, 2025)
-            const weddingDate = new Date('August 24, 2025 00:00:00').getTime();
+        function calculateMacros() {
+            const weight = parseFloat(document.getElementById('macroWeight').value);
+            const calories = parseFloat(document.getElementById('macroCalories').value);
             
-            // Get current date and time
-            const now = new Date().getTime();
-            
-            // Calculate the time remaining
-            const timeRemaining = weddingDate - now;
-            
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-            
-            // Update the countdown display
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            
-            // Update progress bar (assuming 12-day plan from Aug 12 to Aug 23)
-            const planStartDate = new Date('August 12, 2025 00:00:00').getTime();
-            const planEndDate = new Date('August 23, 2025 23:59:59').getTime();
-            const totalPlanDuration = planEndDate - planStartDate;
-            
-            let progressPercentage = 0;
-            if (now >= planStartDate && now <= planEndDate) {
-                const elapsed = now - planStartDate;
-                progressPercentage = Math.min(100, (elapsed / totalPlanDuration) * 100);
-            } else if (now > planEndDate) {
-                progressPercentage = 100;
-            }
-            
-            const progressBar = document.getElementById('progress');
-            progressBar.style.width = progressPercentage + '%';
-            progressBar.textContent = Math.round(progressPercentage) + '%';
-            
-            // If the countdown is over, display a message
-            if (timeRemaining < 0) {
-                document.getElementById('countdown').innerHTML = '<div class="countdown-item"><span>00</span><p>Days</p></div><div class="countdown-item"><span>00</span><p>Hours</p></div><div class="countdown-item"><span>00</span><p>Minutes</p></div><div class="countdown-item"><span>00</span><p>Seconds</p></div>';
-            }
+            const weightKg = weight * 0.453592;
+            const protein = Math.round(weightKg * 2.0); // 2g/kg for fat loss
+            const fat = Math.round((calories * 0.3) / 9); // 30% of calories from fat
+            const carbs = Math.round((calories - (protein * 4) - (fat * 9)) / 4); // Remaining calories from carbs
+
+            document.getElementById('macroResult').style.display = 'block';
+            document.getElementById('proteinOutput').textContent = `Protein: ${protein}g (${Math.round(protein * 4)} calories)`;
+            document.getElementById('carbOutput').textContent = `Carbohydrates: ${carbs}g (${Math.round(carbs * 4)} calories)`;
+            document.getElementById('fatOutput').textContent = `Fat: ${fat}g (${Math.round(fat * 9)} calories)`;
         }
-        
-        // Tab functionality
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Get the tab content id
-                const tabId = tab.getAttribute('data-tab');
-                
-                // Remove active class from all tabs and tab contents
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-                
-                // Add active class to the clicked tab and corresponding tab content
-                tab.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-            });
+
+        function calculateDietBreak() {
+            const weight = parseFloat(document.getElementById('breakWeight').value);
+            const calories = parseFloat(document.getElementById('breakCalories').value);
+            
+            const weightKg = weight * 0.453592;
+            const bmr = (10 * weightKg) + (6.25 * 178) - (5 * 30) + 5;
+            
+            // More conservative calculation - using 1.25 multiplier instead of 1.5
+            const conservativeTdee = bmr * 1.25;
+            const breakCalories = Math.round(conservativeTdee);
+            
+            document.getElementById('breakResult').style.display = 'block';
+            document.getElementById('breakOutput').textContent = 
+                `Diet Break Calories: ${breakCalories} calories per day for 5-7 days. ` +
+                `Increase carbohydrates while maintaining protein intake. ` +
+                `This conservative approach will help reset leptin levels while minimizing fat gain.`;
+        }
+
+        // Initialize with default values
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateMacros();
         });
-        
-        // Initialize calendar and countdown
-        generateCalendar();
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-        
-        // Show first day by default
-        showWorkoutDetails('day1');
     </script>
 </body>
 </html>
